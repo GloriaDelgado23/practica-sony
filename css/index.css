@@ -1,0 +1,122 @@
+/* Reset / Normalizador */
+
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+li{
+    list-style: none;
+}
+
+html{
+    scroll-behavior: block;
+}
+
+a{
+    display: block;
+}
+
+p a {
+    display: inline;
+}
+
+img{
+    display: block;
+    width: 100%;
+    height:initial;
+}
+
+:root{
+    font-size: 100%;
+}
+
+h1 , h2 , h3 , h4 , h5 , h6 , p , strong , a , em , mark{
+    font-size: inherit;
+    font-style: inherit;
+    font-weight: inherit;
+    color: inherit;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+body{
+    /* Ver qué propiedades se repiten a lo largo de la web 
+        - Tipografía base/principal de toda la web
+        - Tamaño de la fuente (no es habitual pero si la queremos hacer más grande en general, se hará desde aquí.
+          
+    */
+}
+
+.Novedades{
+    width: 70%;
+    background-color: antiquewhite;
+    margin: auto;
+    gap: 2rem;
+    
+    display: grid;
+    grid-template-columns: repeat( 6 , 1fr );
+    grid-auto-rows: 9.375rem
+}
+
+@media (max-width:991px){
+    .Novedades{
+        grid-template-columns: repeat( 2 , 1fr );
+    }
+}
+
+.Premios{
+    background-color: aquamarine;
+    grid-column: span 3;
+    grid-row: span 1;
+}
+
+@media (max-width:991px){
+    .Premios{
+        grid-row: span 1;
+    }
+}
+
+.Auriculares{
+    background-color: crimson;
+    grid-column: span 3;
+    grid-row: span 2;
+}
+
+@media (max-width:991px){
+    .Auriculares{
+        grid-column: span 1;
+    }
+}
+
+.ILCE{
+    background-color: chartreuse;
+}
+
+@media (max-width:991px){
+    .ILCE{
+        grid-row: span 2
+    }
+}
+
+.ZV{
+    background-color: darkblue;
+}
+
+@media (max-width:991px){
+    .ZV{
+        grid-row: span 2
+    }
+}
+
+.SEL{
+    background-color: blueviolet;
+}
+
+@media (max-width:991px){
+    .SEL{
+        display: none;
+    }
+}
